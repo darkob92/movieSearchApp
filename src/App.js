@@ -11,6 +11,8 @@ class App extends Component {
     searchTerm: ''
   }
 
+
+  //submit request handler for movies from "movieDB" API
   handleSubmit = (e) => {
     e.preventDefault();
 
@@ -34,6 +36,7 @@ class App extends Component {
       });
   }
 
+  //search input event handler
   handleChange = (e) => {
     this.setState({ searchTerm: e.target.value});
   }
@@ -46,6 +49,7 @@ class App extends Component {
           handleChange={this.handleChange}
           handleSubmit={this.handleSubmit}
           />
+        {/* wrapper div around MovieCard component which will be replaced later */}
         <div
           style={{
             marginTop: "6rem",
@@ -58,7 +62,6 @@ class App extends Component {
             return (
               <MovieCard
                 title={movie.title}
-                overview={movie.overview}
                 poster={movie.poster_path}
                 key={movie.id}
               />

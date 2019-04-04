@@ -1,8 +1,7 @@
 .card {
-  width: 34rem;
-  height: 54rem;
-  margin: 3rem 4rem;
-  text-align: center;
+  width: 25rem;
+  height: 35rem;
+  margin: 2rem 2rem;
 }
 
 .card img {
@@ -13,6 +12,7 @@
 .card h3 {
   font-size: 2rem;
   color: #fefefe;
+  text-align: center;
 }
 
 .card p {
