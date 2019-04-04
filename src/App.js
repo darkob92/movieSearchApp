@@ -33,9 +33,9 @@ class App extends Component {
         <Navbar />
         <Search />
         <div style={{
-          marginTop: '4rem',
+          marginTop: '6rem',
           display: 'flex',
-          justifyContent: 'space-between',
+          justifyContent: 'flex-start',
           flexWrap: 'wrap'
         }}>
           {this.state.movies.map(movie => {
