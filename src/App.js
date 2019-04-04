@@ -12,7 +12,7 @@ class App extends Component {
 
   componentDidMount() {
     const apiKey = '818d6d814cdf31b86d056b3d64014141';
-    axios.get(`https://api.themoviedb.org/3/search/movie?query=taken&api_key=${apiKey}`)
+    axios.get(`https://api.themoviedb.org/3/search/movie?query=avengers&api_key=${apiKey}`)
       .then(res => {
         const results = res.data.results;
         //console.log(results);
@@ -39,7 +39,12 @@ class App extends Component {
           flexWrap: 'wrap'
         }}>
           {this.state.movies.map(movie => {
-            return <h1>{movie.title}</h1>
+            return <MovieCard 
+            title={movie.title} 
+            overview={movie.overview}
+            poster={movie.poster_path}
+            key={movie.id}
+            />
           })}
         </div>
       </div>

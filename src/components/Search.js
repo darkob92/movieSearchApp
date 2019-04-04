@@ -15,7 +15,7 @@ const Search = () => {
           padding: '5px',
           border: '1px solid #FEFEFE',
           borderRadius: '5px',
-          color: '#FEFEFE'
+          color: '#000'
         }}
         />
     </div>
