@@ -1,4 +1,13 @@
 .navbar-container {
-  height: 10rem;
+  height: 6rem;
   width: 100%;
+  background: #000000;
+  text-align: center;
+}
+
+.main-title {
+  color: #FEFEFE;
+  margin: 0;
+  padding-top: 1rem;
+  font-size: 3rem;
 }
