@@ -42,6 +42,7 @@ class App extends Component {
   }
 
   render() {
+    const noImg = 'https://developersushant.files.wordpress.com/2015/02/no-image-available.png';
     return (
       <div className="App">
         <Header 
@@ -53,7 +54,7 @@ class App extends Component {
             return (
               <MovieCard
                 title={movie.title}
-                poster={movie.poster_path === null ? 'https://developersushant.files.wordpress.com/2015/02/no-image-available.png' : `http://image.tmdb.org/t/p/w185/${movie.poster_path}`}
+                poster={movie.poster_path === null ? noImg : `http://image.tmdb.org/t/p/w185/${movie.poster_path}`}
                 key={movie.id}
                 overview={movie.overview.length === 0 ? 'No overview for this movie' : movie.overview }
               />
