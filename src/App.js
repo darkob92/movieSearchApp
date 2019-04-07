@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
-import Navbar from './components/Navbar';
-import Search from './components/Search';
+import Header from './components/containers/Header';
+import Main from './components/containers/Main';
 import MovieCard from './components/MovieCard';
 
 class App extends Component {
@@ -44,30 +44,22 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navbar />
-        <Search 
-          handleChange={this.handleChange}
-          handleSubmit={this.handleSubmit}
-          />
-        {/* wrapper div around MovieCard component which will be replaced later */}
-        <div
-          style={{
-            marginTop: "6rem",
-            display: "flex",
-            justifyContent: "flex-start",
-            flexWrap: "wrap"
-          }}
-        >
+        <Header 
+          handleChange={this.handleChange} 
+          handleSubmit={this.handleSubmit} 
+        />
+        <Main>
           {this.state.movies.map(movie => {
             return (
               <MovieCard
                 title={movie.title}
-                poster={movie.poster_path}
+                poster={movie.poster_path === null ? 'https://developersushant.files.wordpress.com/2015/02/no-image-available.png' : `http://image.tmdb.org/t/p/w185/${movie.poster_path}`}
                 key={movie.id}
+                overview={movie.overview.length === 0 ? 'No overview for this movie' : movie.overview }
               />
             );
           })}
-        </div>
+        </Main>
       </div>
     );
   }

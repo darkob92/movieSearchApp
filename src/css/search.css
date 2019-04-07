@@ -1,0 +1,26 @@
+.search-container {
+  margin-top: 2rem;
+  margin-right: 3rem;
+  width: 50%;
+  display: inline-block;
+}
+
+.search-container form {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search-container input {
+  font-size: 20px;
+  margin-right: 1rem;
+  padding: 5px;
+  border: none;
+  border-bottom: 3px solid #FEFEFE;
+  color: #FEFEFE;
+  background: transparent;
+}
+
+.search-container input:focus {
+  outline: none;
+}

@@ -3,12 +3,14 @@ import '../css/movieCard.css';
 
 class MovieCard extends Component {
   render() {
-    // const for fetching image url from "MovieDB" API
-    const imgUrl = `http://image.tmdb.org/t/p/w185/${this.props.poster}`;
+    const { poster, title, overview} = this.props;
     return (
       <div className="card">
-        <img src={imgUrl} alt="placeholder" />
-        <h3>{this.props.title}</h3>
+        <img src={poster} alt="placeholder" />
+        <div className="text-box">
+          <h3>{title}</h3>
+          <p>{overview}</p>
+        </div>
       </div>
     );
   }
