@@ -9,7 +9,6 @@ class MovieCard extends Component {
         <img src={poster} alt="placeholder" />
         <div className="text-box">
           <h3>{title}</h3>
-          <p>{overview}</p>
         </div>
       </div>
     );

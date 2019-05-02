@@ -5,7 +5,6 @@ const Main = (props) => {
     <div style={{
       margin: "6rem auto",
       display: "flex",
-      flexDirection: "column",
       justifyContent: "center",
       flexWrap: "wrap",
       width: '80%'
